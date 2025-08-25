@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { PaymentsModule } from './payments/payments.module';
 import { CcBillModule } from './ccbill/ccbill.module';
 import { PaymentMethod } from './payments/entities/payment-method.entity';
@@ -26,7 +24,7 @@ import { Charge } from './payments/entities/charge.entity';
     PaymentsModule,
     CcBillModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
